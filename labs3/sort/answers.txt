@@ -1,0 +1,71 @@
+sort1 uses: bubble
+
+How do you know?: See below logic
+For bubble sort, the best case scenario (sorted)
+    should always be faster than the worst case
+    scenario (reversed). Since this sort takes 5.549
+    seconds to run reversed50000 vs 0.463 seconds to
+    run sorted50000.txt, this could be bubble sort.
+For selection sort, the worst case scenario (reversed)
+    and best case scenario (sorted) should take the same
+    amount of time. Looking at the gap above, I will
+    conclude that this is bubble sort.
+Here's more on bubble sort:
+    • Worst-case scenario: The array is in reverse order; we have
+    to “bubble” each of the n elements all the way across the
+    array, and since we can only fully bubble one element into
+    position per pass, we must do this n times.
+    • Best-case scenario: The array is already perfectly sorted, and
+    we make no swaps on the first pass.
+
+sort2 uses: merge
+
+How do you know?: See below logic
+For bubble sort, the best case scenario (sorted)
+    should always be faster than the worst case
+    scenario (reversed). Since this sort takes 0.452
+    seconds to run reversed50000 vs 0.486 seconds to
+    run sorted50000.txt, this is not bubble sort.
+For merge sort, the best/worst case scenario should
+    be faster than both selection/bubble sort and
+    we see that's the case here. Therefore I can
+    conclude that this is merge sort.
+Here's more on merge sort:
+    • Worst-case scenario: We have to split n elements up and
+    then recombine them, effectively doubling the sorted
+    subarrays as we build them up. (combining sorted 1-element
+    arrays into 2-element arrays, combining sorted 2-element
+    arrays into 4-element arrays…)
+    • Best-case scenario: The array is already perfectly sorted. But
+    we still have to split and recombine it back together with this
+    algorithm.
+
+
+sort3 uses: selection
+
+How do you know?: See below logic
+For bubble sort, the best case scenario (sorted)
+    should always be faster than the worst case
+    scenario (reversed). Since this sort takes 3.399
+    seconds to run reversed50000 vs 3.262 seconds to
+    run sorted50000.txt, this could be bubble sort.
+For selection sort, the worst case scenario (reversed)
+    and best case scenario (sorted) should take the same
+    amount of time. Looking at the gap above, I will
+    conclude that this is selection sort. Also it makes
+    sense if sort1 is already bubble sort.
+Here's more on selection sort:
+    • Worst-case scenario: We have to iterate over each of the n
+    elements of the array (to find the smallest unsorted
+    element) and we must repeat this process n times, since only
+    one element gets sorted on each pass.
+    • Best-case scenario: Exactly the same! There’s no way to
+    guarantee the array is sorted until we go through this
+    process for all the elements.
+
+////////////////////////////////////////////////////
+Table comparing sorts in worst/best case scenarios
+////////////////////////////////////////////////////
+Sort        | Selection | Bubble    | Merge
+Upper Bound | n^2       | n^2       | n log n
+Lower Bound | n^2       | n         | n log n
